@@ -1,0 +1,81 @@
+.calculator{
+    
+    background-color: rgb(0, 0, 0);
+    width: 20%;
+    border-radius: 10px;
+}
+
+.b1{
+    margin-top: 1cm;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    width: 1cm;
+    height: 1cm; 
+    margin-right: 12px;
+}
+.b2{
+    margin-top: 1cm;
+    background-color: rgba(0, 119, 255, 0.158);
+    color: white;
+    width: 1cm;
+    height: 1cm;
+    margin-right: 12px;
+}
+.b3{
+    margin-top: 1cm;
+    background-color: rgba(0, 119, 255, 0.158);
+    color: white;
+    width: 1cm;
+    height: 1cm;
+    margin-right: 12px;
+}
+.b4{
+    margin-top: 1cm;
+    background-color: rgba(0, 119, 255, 0.158);
+    color: white;
+    width: 1cm;
+    height: 1cm;
+    margin-right: 12px;
+}
+
+.b6{
+    margin-top: 1cm;
+    background-color: rgba(0, 119, 255, 0.158);
+    color: white;
+    width: 1cm;
+    height: 1cm;
+    margin-right: 12px;  
+}
+
+.b0{
+    margin-top: 1cm;
+    background-color: rgba(252, 129, 129, 0.288);
+    color: white;
+    width: 1.8cm;
+    height: 1cm;
+}
+
+.b7{
+    background-color: rgba(0, 119, 255, 0.158);
+    color: white;
+    width: 1cm;
+    height: 1cm;
+       
+    margin-right: 11px; 
+    margin-top: 1cm;    
+}
+.b8{
+    background-color: rgba(0, 119, 255, 0.158);
+    color: white;
+    width: 1.3cm;
+    height: 1cm;
+    margin-right: 11px; 
+    margin-top: 1cm;
+    margin-bottom: 19px ;
+}
+.input{
+    height: 1cm;
+    margin-top: 0.5cm;
+    margin-right: 0.5cm;
+    width: 0.5cm;
+}

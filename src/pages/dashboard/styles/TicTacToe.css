@@ -101,3 +101,11 @@
     height: 8cm;
     width: 100cm;
 }
+#cell1:hover{
+    background-color: rgba(92, 22, 119, 0);
+    width: 2cm;
+    height: 2cm;
+    text-align: center;
+    border: 3px solid red;
+    
+}

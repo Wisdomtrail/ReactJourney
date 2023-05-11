@@ -1,0 +1,140 @@
+.TopNav{
+    display: flex;
+    color: white;
+}
+.Awards{
+    margin-left: 1.3cm;
+}
+.maincontainer{
+    background-color: black;
+    height: 18.1cm;
+}
+.A{
+    width: 3cm;
+    margin-right: 5cm;
+}
+.B{
+    padding-left: 5cm;
+    display: flex;
+}
+.a{
+    margin-right: 2cm;
+    font-size: 20px;
+}
+.o{
+    margin-right: 1cm;
+    font-size: 20px;
+}
+.c{
+    margin-right: 1cm;
+    font-size: 20px;
+}
+.sign{
+    margin-left:8cm;
+}
+
+.body{
+    color: white;
+    display: flex;
+    width: 35cm;
+    height: 15cm;
+    background-color: rgb(53, 48, 48);
+    border-radius: 0px;
+}
+.body input {
+    border: none;
+    border-bottom: 1px solid rgb(165, 155, 155);
+    outline: none;
+    background-color:  rgb(53, 48, 48);
+    color: white;
+}
+.body select{
+    height: 1cm;
+    width: 2cm;
+    border: none;
+    border-bottom: 1px solid rgb(165, 155, 155);
+    outline: none;
+    background-color: rgb(53, 48, 48);
+    color: white;
+}
+#city{
+    margin-right: 2cm;
+}
+#state{
+    margin-right: 1cm;
+}
+#zip{
+    width: 2cm;
+    padding-right: 1cm;
+}
+#country{
+margin-right: 2cm;
+}
+
+.form{
+    margin-left: 3cm;
+}
+.upload{
+    margin-left: 10cm;
+}
+#photo{
+    width: 10cm;
+}
+#card{
+    width: 10cm;
+}
+#p{
+    padding-right: 7cm;
+}
+#pp{
+    padding-right: 6cm;
+}
+#check{
+    padding-right: 10cm;
+}
+#condition{
+    color: blue;
+    padding-right: 6cm;
+    background-color:  rgb(53, 48, 48);
+}
+.checkBox{
+    padding-right: 7.8cm;
+}
+
+#submit{
+    border-radius: 20px;
+    width: 5cm;
+    margin-right: 1cm;
+}
+#cancel{
+    background-color: black;
+    border: 2px solid rgb(238, 231, 218);
+    border-radius: 20px;
+    width: 5cm;
+}
+#pic{
+    height: 3cm;
+    border: 2px solid rgb(233, 226, 214);
+    justify-content: center;
+    align-items: center;
+}
+#pl{
+    padding-right: 6cm;
+}
+#pl span{
+    font-size: 15px;
+    color: white;
+}
+.s{
+   margin-left: 8cm;
+}
+.s{
+    font-size: 20px;
+}
+.form h3{
+    padding-right: 2cm;
+}
+.pi{
+    background-color: black;
+    color: whitesmoke;
+}

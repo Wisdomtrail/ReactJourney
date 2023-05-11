@@ -1,136 +1,71 @@
-import "../styles/TicTacToe.css";
 import React, { useState } from "react";
 
-function TicTacToe() {
-  const [cell1Text, setCell1Text] = useState("");
-  const [cell2Text, setCell2Text] = useState("");
-  const [cell3Text, setCell3Text] = useState("");
-  const [cell4Text, setCell4Text] = useState("");
-  const [cell5Text, setCell5Text] = useState("");
-  const [cell6Text, setCell6Text] = useState("");
-  const [cell7Text, setCell7Text] = useState("");
-  const [cell8Text, setCell8Text] = useState("");
-  const [cell9Text, setCell9Text] = useState("");
-  const [char, setChar] = useState("X");
+const TicTacToe = () => {
+  const [board, setBoard] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
 
-  function changeChar(char) {
-    setChar(char === "X" ? "O" : "X");
-  }
-
-  function checkForWin(char){
-    if (
-      (cell1Text === char && cell2Text === char && cell3Text === char) ||
-      (cell4Text === char && cell5Text === char && cell6Text === char) ||
-      (cell7Text === char && cell8Text === char && cell9Text === char) ||
-      (cell1Text === char && cell4Text === char && cell7Text === char) ||
-      (cell2Text === char && cell5Text === char && cell8Text === char) ||
-      (cell3Text === char && cell6Text === char && cell9Text === char) ||
-      (cell1Text === char && cell5Text === char && cell9Text === char) ||
-      (cell3Text === char && cell5Text === char && cell7Text === char)
-    ) {
-      alert("Player "+char+" wins!");
-      newGame();
+  const handleClick = (i) => {
+    const newBoard = [...board];
+    if (calculateWinner(newBoard) || newBoard[i]) {
+      return;
     }
-  }
+    newBoard[i] = xIsNext ? "X" : "O";
+    setBoard(newBoard);
+    setXIsNext(!xIsNext);
+  };
 
-  function newGame(){
-    setCell1Text("");
-    setCell2Text("");
-    setCell3Text("");
-    setCell4Text("");
-    setCell5Text("");
-    setCell6Text("");
-    setCell7Text("");
-    setCell8Text("");
-    setCell9Text("");
-  }
-
-  function handleClick() {
-    const input = document.getElementById("id");
-    const num = input.value;
-
-    
-   
-  
-    if (num === "1" && cell1Text === "") {
-      setCell1Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "2" && cell2Text === "") {
-      setCell2Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "3" && cell3Text === "") {
-      setCell3Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "4" && cell4Text === "") {
-      setCell4Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "5" && cell5Text === "") {
-      setCell5Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "6" && cell6Text === "") {
-      setCell6Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "7" && cell7Text === "") {
-      setCell7Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "8" && cell8Text === "") {
-      setCell8Text(char);
-      checkForWin(char);
-      changeChar(char);
-    } else if (num === "9" && cell9Text === "") {
-      setCell9Text(char);
-      checkForWin(char);
-      changeChar(char);
-    }
-    
-  }
-
+  const renderSquare = (i) => {
     return (
-      <center>
-        <div className="MainConatiner">
-          <div>
-            TICTACTOE GAME
-            <br />
-            <div id='char'>
-            player  {char} enter a number
-            </div>
-          </div>
-          <div className="tictactoe">
-            <div className="board">
-              <div className="topNav">
-                <div id="cell1">{cell1Text}</div>
-                <div id="cell2">{cell2Text}</div>
-                <div id="cell3">{cell3Text}</div>
-              </div>
-              <div className="secondNav">
-                <div className="cell4">{cell4Text}</div>
-                <div className="cell5">{cell5Text}</div>
-                <div className="cell6">{cell6Text}</div>
-              </div>
-              <div className="lastNav">
-                <div className="cell7">{cell7Text}</div>
-                <div className="cell8">{cell8Text}</div>
-                <div className="cell9">{cell9Text}</div>
-              </div>
-            </div>
-          </div>
-          <input type="text" id="id" />
-          <button id="button" onClick={handleClick}>
-            press
-          </button>
-          <button id="button" onClick={newGame}>
-            New Game
-          </button>
-        </div>
-      </center>
+      <button className="square" onClick={() => handleClick(i)}>
+        {board[i]}
+      </button>
     );
-  }   
+  };
+
+  const winner = calculateWinner(board);
+  const status = winner
+    ? `Winner: ${winner}`
+    : `Next player: ${xIsNext ? "X" : "O"}`;
+
+  return (
+    <div>
+      <div className="status">{status}</div>
+      <div className="board-row">
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
+      </div>
+      <div className="board-row">
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+      </div>
+      <div className="board-row">
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
+  );
+};
+
+function calculateWinner(board) {
+  const lines = [    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return board[a];
+    }
+  }
+  return null;
+}
 
 export default TicTacToe;

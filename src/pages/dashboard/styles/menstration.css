@@ -1,0 +1,163 @@
+.mainContainer{
+    background-color: palevioletred;
+}
+.cont{
+    background-color: black;
+    height: 19cm;
+}
+
+.top{
+    color: white;
+    background-color: rgb(156, 10, 59);
+    height: 3cm;
+    border-radius: 55px;
+    display: flex;
+}
+.D{
+   color: white;
+   margin-left: 2.5cm;
+   margin-top: 35px;
+   background-color: black;
+   height: 1cm;
+   border-radius: 5px;
+   padding-top: 8px;
+   padding-left: 5px;
+   padding-right: 5px;
+   text-decoration: none;
+}
+.name{
+    padding-top: 20px;
+    padding-left: 15px;
+    font-style: italic;
+    font-size: 50px;
+}
+
+.D:hover{
+    background-color: red;
+    color: white;
+}
+.R:hover{
+    background-color: red;
+    color: white;
+}
+.P:hover{
+    background-color: red;
+    color: white;
+}
+.A:hover{
+    background-color: red;
+    color: white;
+}
+.R{
+    color: white;
+    margin-left: 2.5cm;
+    margin-top: 35px;
+    background-color: black;
+    height: 1cm;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+}
+.P{
+    color: white;
+    margin-left: 2.5cm;
+    margin-top: 35px;
+    background-color: black;
+    height: 1cm;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+}
+.A{
+    color: white;
+    margin-left: 2.5cm;
+    margin-top: 35px;
+    background-color: black;
+    height: 1cm;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+}
+  
+.contactContainer p {
+    font-weight: bold;
+    margin-top: 10cm;
+  }
+  
+  .contactContainer img {
+    margin-top: 50px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+    margin: 0 20px;
+    background-color: #f2f2f2;
+  }
+.contactContainer img:hover {
+    background-color: red;
+    transform: scale(1.2);
+}
+
+   
+.T{
+    color: white;
+    margin-left: 2cm;
+    margin-top: 35px;
+    background-color: black;
+    height: 1cm;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+}
+
+.on{
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contactContainer{
+background-color: rgb(0, 0, 0);
+display: flex;
+height: 100cm;
+width: 35cm;
+}
+
+.spot {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.videoContainer{
+    display: flex;
+    margin-left: 13cm;
+}
+.textContainer{
+    margin-top: 5cm;
+    margin-left: 3cm;
+}
+.pad {
+    animation: move 5s infinite alternate ease-in-out;
+}
+  
+@keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
