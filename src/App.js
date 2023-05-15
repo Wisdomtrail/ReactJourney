@@ -13,6 +13,7 @@ import Mycomponent from './pages/dashboard/componenent/Fecth';
 import Calculator from './pages/dashboard/componenent/Calculator';
 import Card from './pages/dashboard/componenent/Card';
 import Form from './pages/dashboard/componenent/Form.jsx';
+import Clock from './pages/dashboard/componenent/Clock';
 function App() {
   return (
     <div className="App">
@@ -29,7 +30,8 @@ function App() {
       {/* <Calculator/>  */}
      {/* <Mycomponent/> */}
      {/* <Card/> */}
-     <Form/>
+     {/* <Form/> */}
+     <Clock/>
     </div>
   );
 }

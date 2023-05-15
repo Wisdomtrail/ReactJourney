@@ -25,6 +25,7 @@ function UserForm(){
                 : !values.firstName ? errors.firstName = 'Required'
                 : values.firstName.length < 2 ? errors.firstName = 'Invalid First Name'
                 : values.email ? errors.email = 'Required'
+                : !
 
              }}>
 
